@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Article } from '../types';
+import { Link } from "react-router-dom";
 
 interface ArticleSectionProps {
   articles: Article[];
@@ -18,29 +19,32 @@ export const ArticleSection: React.FC<ArticleSectionProps> = ({ articles }) => {
       {/* Scrollable Container */}
       <div className="cute-scroll h-[400px] overflow-y-auto pr-2 space-y-3">
         {articles.map((article) => (
-          <article 
+          <Link 
             key={article.id} 
-            className="group p-4 rounded-2xl border-2 border-transparent hover:border-brand-blue/30 bg-blue-50/50 hover:bg-blue-50 transition-all cursor-pointer"
+            to={`/blog/${article.id}`}
+            className="block group p-4 rounded-2xl border-2 border-transparent hover:border-brand-blue/30 bg-blue-50/50 hover:bg-blue-50 transition-all cursor-pointer"
           >
-            <div className="flex justify-between items-start mb-1">
-              <h3 className="font-bold text-gray-800 group-hover:text-brand-blue transition-colors">
-                {article.title}
-              </h3>
-              <span className="text-xs font-medium text-gray-400 whitespace-nowrap ml-2">
-                {article.date}
-              </span>
-            </div>
-            <p className="text-sm text-gray-600 mb-2 line-clamp-2">
-              {article.summary}
-            </p>
-            <div className="flex gap-2">
-              {article.tags.map((tag) => (
-                <span key={tag} className="text-[10px] bg-white text-brand-blue px-2 py-0.5 rounded-full shadow-sm">
-                  #{tag}
+            <article>
+              <div className="flex justify-between items-start mb-1">
+                <h3 className="font-bold text-gray-800 group-hover:text-brand-blue transition-colors">
+                  {article.title}
+                </h3>
+                <span className="text-xs font-medium text-gray-400 whitespace-nowrap ml-2">
+                  {article.date}
                 </span>
-              ))}
-            </div>
-          </article>
+              </div>
+              <p className="text-sm text-gray-600 mb-2 line-clamp-2">
+                {article.summary}
+              </p>
+              <div className="flex gap-2">
+                {article.tags.map((tag) => (
+                  <span key={tag} className="text-[10px] bg-white text-brand-blue px-2 py-0.5 rounded-full shadow-sm">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            </article>
+          </Link>
         ))}
       </div>
     </div>

@@ -19,3 +19,15 @@ export interface SocialLink {
   url: string;
   username: string;
 }
+
+export interface StepData {
+  id: number;
+  title: string;
+  description: string;
+  code?: {
+    lang: string;
+    filename?: string;
+    content: string;
+  }[];
+  note?: string;
+}
