@@ -4,6 +4,9 @@ import './index.css'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
+  // React.StrictMode は「開発モード専用」の安全チェックツール。
+  // コンポーネントの潜在的なバグや非推奨コードを検出する
+  // 本番ビルドでは自動的に無効になるため、動作に影響はない。
   <StrictMode>
     <App />
   </StrictMode>,
