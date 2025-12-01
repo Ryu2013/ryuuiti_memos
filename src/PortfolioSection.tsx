@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Project } from '../types';
+import shiftappImage from './assets/shiftapp.png';
 
 interface PortfolioSectionProps {
   projects: Project[];
@@ -20,7 +21,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projects }) 
           >
             <div className="aspect-video overflow-hidden">
               <img
-                src={project.imageUrl}
+                src={shiftappImage}
                 alt={project.title}
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />

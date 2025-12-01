@@ -4,7 +4,7 @@ export const SocialLinks: React.FC = () => {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12 pb-12">
       <a 
-        href="https://github.com" 
+        href="https://github.com/Ryu2013" 
         target="_blank" 
         rel="noopener noreferrer"
         className="flex items-center gap-3 px-8 py-4 bg-gray-800 text-white rounded-full font-bold shadow-lg transform hover:-translate-y-1 hover:shadow-xl transition active:scale-95 w-full sm:w-auto justify-center"
@@ -14,7 +14,7 @@ export const SocialLinks: React.FC = () => {
       </a>
 
       <a 
-        href="https://twitter.com" 
+        href="https://x.com/fBZTus6NvG72639" 
         target="_blank" 
         rel="noopener noreferrer"
         className="flex items-center gap-3 px-8 py-4 bg-[#1DA1F2] text-white rounded-full font-bold shadow-lg transform hover:-translate-y-1 hover:shadow-xl transition active:scale-95 w-full sm:w-auto justify-center"

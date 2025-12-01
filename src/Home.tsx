@@ -6,20 +6,13 @@ import { SocialLinks } from './SoclLinks';
 import type { Article, Project } from '../types';
 
 // モックデータの生成
-const generateArticles : Article[] = [
-    {
+const generateArticles: Article[] = [
+  {
     id: `article-1`,
-    title: `Reactのパフォーマンスチューニング その1`,
-    date: `2023-10-01`,
-    summary: 'Reactのレンダリング最適化について、useMemoとuseCallbackの使い分けを中心に解説します。',
-    tags: ['React', 'Performance', 'Hooks']
-  },
-    {
-    id: `article-2`,
-    title: `Reactのパフォーマンスチューニング その1`,
-    date: `2023-10-01`,
-    summary: 'Reactのレンダリング最適化について、useMemoとuseCallbackの使い分けを中心に解説します。',
-    tags: ['React', 'Performance', 'Hooks']
+    title: `Rails: includes, eager_load, joins, left_joins の違い`,
+    date: `2023-10-02`,
+    summary: 'RailsのActiveRecordにおける4つのクエリメソッドの違いを、発行されるSQLと視覚的なデータフローで解説します。',
+    tags: ['Rails', 'ActiveRecord', 'SQL']
   },
 ];
 
@@ -40,7 +33,7 @@ const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        
+
         {/* ヘッダーの装飾 */}
         <div className="text-center mb-8 animate-fade-in-down">
           <h2 className="text-brand-green font-black text-xl tracking-widest uppercase mb-2">プロフィール</h2>
@@ -51,10 +44,10 @@ const Home: React.FC = () => {
         <ProfileSection />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          
+
           {/* 2. 記事セクション (大画面では1カラム、小画面では全幅) */}
           <div className="lg:col-span-1">
-             <ArticleSection articles={articles} />
+            <ArticleSection articles={articles} />
           </div>
 
           {/* 3. ポートフォリオセクション (大画面では2カラム) */}

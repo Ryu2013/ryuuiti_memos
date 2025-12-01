@@ -17,8 +17,8 @@ export const StepCard: React.FC<StepCardProps> = ({ step, isLast }) => {
 
       {/* Number Badge */}
       <div className="flex-shrink-0">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-indigo-600 flex items-center justify-center shadow-sm z-10 relative">
-          <span className="text-indigo-600 font-bold text-lg">{step.id}</span>
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-2 border-brand-green flex items-center justify-center shadow-sm z-10 relative">
+          <span className="text-brand-blue font-bold text-lg">{step.id}</span>
         </div>
       </div>
 

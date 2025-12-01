@@ -1,4 +1,6 @@
 import React from 'react';
+import profileImage from './assets/profile.jpg';
+import { MyCharacter } from "./components/MyCharacter";
 
 export const ProfileSection: React.FC = () => {
   return (
@@ -6,19 +8,19 @@ export const ProfileSection: React.FC = () => {
       <div className="relative group">
         <div className="absolute -inset-1 bg-gradient-to-r from-brand-green to-brand-blue rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
         <img
-          src="./src/assets/profile.jpg"
+          src={profileImage}
           alt="Profile"
           className="relative w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-white object-cover shadow-inner"
         />
-        <div className="absolute bottom-2 right-2 bg-brand-green text-white p-2 rounded-full border-2 border-white">
-           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m19 16 3 3"/><path d="m19 22 3-3"/></svg>
+        <div className="absolute bottom-2 right-2 bg-white text-white p-2 rounded-full border-2 border-brand-green shadow-sm">
+          <MyCharacter className="w-12 h-12" />
         </div>
       </div>
       
       <h1 className="mt-6 text-3xl font-extrabold text-gray-800 tracking-tight">
-        加藤 <span className="text-brand-blue">竜一</span>
+        加藤 <span className="text-brand-green">竜</span>一
       </h1>
-      <p className="text-brand-green font-bold text-sm mt-1">age 30 / men</p>
+      <p className="text-brand-blue font-bold text-sm mt-1">age 30 / men</p>
       
       <div className="mt-6  max-w-lg">
         <p className="text-gray-600 text-center leading-relaxed">

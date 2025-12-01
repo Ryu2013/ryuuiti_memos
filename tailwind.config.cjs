@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['"M PLUS Rounded 1c"', 'sans-serif'],
+        kakkoii: ['"Dancing Script"', 'cursive'],
       }
     }
   },
