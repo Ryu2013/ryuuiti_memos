@@ -10,9 +10,9 @@ const generateArticles: Article[] = [
   {
     id: `article-1`,
     title: `Rails: includes, eager_load, joins, left_joins の違い`,
-    date: `2023-10-02`,
+    date: `2023-12-01`,
     summary: 'RailsのActiveRecordにおける4つのクエリメソッドの違いを、発行されるSQLと視覚的なデータフローで解説します。',
-    tags: ['Rails', 'ActiveRecord', 'SQL']
+    tags: ['コントローラー']
   },
 ];
 
