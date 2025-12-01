@@ -345,7 +345,7 @@ LEFT OUTER JOIN "posts" ON "posts"."user_id" = "users"."id"`}
                                 UserとPostの全カラムを結合して取得するため、メモリ使用量は増える可能性がありますが、クエリ回数は1回で済みます。
                             </>
                         }
-                        whenToUse="関連テーブル（Posts）のカラムで絞り込み（where）を行いたい場合や、確実に1回のクエリにしたい場合。"
+                        whenToUse="関連テーブル（Posts）のカラムで絞り込み（where）を行いたいかつviewでも使いたい場合。"
                     />
 
                     {/* 4. joins */}
@@ -397,7 +397,7 @@ INNER JOIN "posts" ON "posts"."user_id" = "users"."id"`}
                                 Postを持っているUserだけを取得したい場合に適しています。
                             </>
                         }
-                        whenToUse="「Postを持っているUser」を検索したい時。関連データ自体を使う必要がない、または別途ロードする場合。"
+                        whenToUse="関連テーブル（Posts）のカラムで絞り込み（where）を行いたいがviewでは使わない場合。"
                     />
 
                     {/* 5. left_joins */}
@@ -448,7 +448,7 @@ LEFT OUTER JOIN "posts" ON "posts"."user_id" = "users"."id"`}
                                 「Postを持っていないUser」を探す（<code>User.left_joins(:posts).where(posts: {'{'} id: nil {'}'})</code>）際によく使われます。
                             </>
                         }
-                        whenToUse="「Postを持っていないUser」を検索したい時や、関連の有無に関わらず集計したい時。"
+                        whenToUse="関連テーブル（Posts）のカラムを持っていないで絞り込み（where）を行いたいがviewでは使わない場合。"
                     />
 
                     {/* Conclusion */}
@@ -457,15 +457,15 @@ LEFT OUTER JOIN "posts" ON "posts"."user_id" = "users"."id"`}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
                             <div className="bg-slate-700 p-4 rounded-lg">
                                 <span className="text-emerald-400 font-bold block mb-1">includes</span>
-                                <span className="text-sm text-slate-300">基本はこれ。N+1防止。</span>
+                                <span className="text-sm text-slate-300">基本はこれ。自動でレイルズが選ぶ。</span>
                             </div>
                             <div className="bg-slate-700 p-4 rounded-lg">
                                 <span className="text-emerald-400 font-bold block mb-1">preload</span>
-                                <span className="text-sm text-slate-300">JOINしたくない時。</span>
+                                <span className="text-sm text-slate-300">eager_loadはしたくない時。</span>
                             </div>
                             <div className="bg-slate-700 p-4 rounded-lg">
                                 <span className="text-emerald-400 font-bold block mb-1">eager_load</span>
-                                <span className="text-sm text-slate-300">関連テーブルで絞り込みたい時。</span>
+                                <span className="text-sm text-slate-300">関連があるレコードで絞り込み＆データも欲しい時。</span>
                             </div>
                             <div className="bg-slate-700 p-4 rounded-lg">
                                 <span className="text-emerald-400 font-bold block mb-1">joins</span>
@@ -473,7 +473,7 @@ LEFT OUTER JOIN "posts" ON "posts"."user_id" = "users"."id"`}
                             </div>
                             <div className="bg-slate-700 p-4 rounded-lg">
                                 <span className="text-emerald-400 font-bold block mb-1">left_joins</span>
-                                <span className="text-sm text-slate-300">関連がないレコードも欲しい時。</span>
+                                <span className="text-sm text-slate-300">関連がないレコードが欲しい時。</span>
                             </div>
                         </div>
                     </div>
