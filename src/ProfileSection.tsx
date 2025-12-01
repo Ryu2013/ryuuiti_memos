@@ -20,7 +20,7 @@ export const ProfileSection: React.FC = () => {
       <h1 className="mt-6 text-3xl font-extrabold text-gray-800 tracking-tight">
         加藤 <span className="text-brand-green">竜</span>一
       </h1>
-      <p className="text-brand-blue font-bold text-sm mt-1">age 30 / men</p>
+      <p className="text-brand-blue font-bold text-sm mt-1">Katou Ryuuichi</p>
       
       <div className="mt-6  max-w-lg">
         <p className="text-gray-600 text-center leading-relaxed">
