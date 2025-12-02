@@ -14,6 +14,13 @@ const generateArticles: Article[] = [
     summary: 'RailsのActiveRecordにおける4つのクエリメソッドの違いを、発行されるSQLと視覚的なデータフローで解説します。',
     tags: ['コントローラー']
   },
+  {
+    id: `article-2`,
+    title: `Rails: OGP設定（固定の場合）`,
+    date: `2023-12-01`,
+    summary: 'RailsアプリでOGPを一種類に固定する場合の設定方法。layoutに直接記述する例。',
+    tags: ['Rails', 'View']
+  },
 ];
 
 const mockProjects: Project[] = [
