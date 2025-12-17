@@ -21,6 +21,13 @@ const generateArticles: Article[] = [
     summary: 'RailsアプリでOGPを一種類に固定する場合の設定方法。layoutに直接記述する例。',
     tags: ['Rails', 'View']
   },
+  {
+    id: `article-3`,
+    title: `GitHub Actions + SSM Run Command で EC2 デプロイ`,
+    date: `2023-12-17`,
+    summary: 'SSHを開放せずに、GitHub ActionsからOIDC認証とSSM経由でEC2に安全にデプロイする手法と手順。',
+    tags: ['AWS', 'GitHub Actions']
+  },
 ];
 
 const mockProjects: Project[] = [
