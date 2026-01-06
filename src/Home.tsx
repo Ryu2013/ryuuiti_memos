@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ProfileSection } from './ProfileSection';
 import { ArticleSection } from './ArticleSection';
 import { PortfolioSection } from './PortfolioSection';
+import { LearningHistorySection } from './LearningHistorySection';
 import { SocialLinks } from './SoclLinks';
 import type { Article, Project } from '../types';
 
@@ -36,7 +37,7 @@ const mockProjects: Project[] = [
     title: 'ケアシフト',
     description: '重度訪問介護事業向けの業務効率化ツール。自身の管理業務の大変さから開発を決意。モバイルフレンドリーで簡単なUIを意識し訪問先でも使いやすい設計に。',
     imageUrl: 'https://picsum.photos/400/300?random=1',
-    techStack: ['Rails', 'Heroku']
+    techStack: ['Rails', 'AWS']
   },
 ];
 
@@ -56,6 +57,9 @@ const Home: React.FC = () => {
 
         {/* 1. プロフィールセクション */}
         <ProfileSection />
+
+        {/* 1.5. 学習履歴セクション */}
+        <LearningHistorySection />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
